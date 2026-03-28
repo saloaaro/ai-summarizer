@@ -1,9 +1,20 @@
+console.log("✅ JS LOADED");
+
 async function summarize() {
+  console.log("🟢 BUTTON CLICKED");
+
+  const text = document.getElementById("inputText").value;
+  const output = document.getElementById("output");
+
+  if (!text) {
+    alert("Kirjoita ensin teksti!");
+    return;
+  }
+
+  // 🔄 Loading state
+  output.innerText = "⏳ Tiivistetään...";
+
   try {
-    const text = document.getElementById("inputText").value;
-
-    console.log("Sending text:", text);
-
     const res = await fetch("/summarize", {
       method: "POST",
       headers: {
@@ -12,13 +23,11 @@ async function summarize() {
       body: JSON.stringify({ text }),
     });
 
-    console.log("Response:", res);
-
     const data = await res.json();
-    console.log("Data:", data);
 
-    document.getElementById("output").innerText = data.summary;
+    output.innerText = data.summary || "❌ Virhe: " + data.error;
   } catch (error) {
-    console.error("ERROR:", error);
+    console.error("❌ FETCH ERROR:", error);
+    output.innerText = "❌ Yhteysvirhe";
   }
 }
