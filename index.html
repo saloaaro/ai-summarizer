@@ -3,17 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <title>AI Summarizer</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
   </head>
-  <body>
-    <h1>AI Summarizer</h1>
 
-    <textarea id="inputText" rows="10" cols="50"></textarea>
-    <br /><br />
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl">
+      <h1 class="text-2xl font-bold mb-4 text-center">🤖 AI Summarizer</h1>
 
-    <button onclick="summarize()">Tiivistä</button>
+      <textarea
+        id="inputText"
+        class="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        rows="8"
+        placeholder="Liitä teksti tähän..."
+      ></textarea>
 
-    <h2>Tiivistelmä:</h2>
-    <p id="output"></p>
+      <button
+        onclick="summarize()"
+        class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+      >
+        Tiivistä
+      </button>
+
+      <div class="mt-6">
+        <h2 class="font-semibold mb-2">Tiivistelmä:</h2>
+        <p id="output" class="bg-gray-50 p-3 rounded-lg min-h-[60px]">
+          Tulos tulee tähän...
+        </p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
