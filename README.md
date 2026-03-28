@@ -1,30 +1,36 @@
-# AI Summarizer
+# AI Summarizer 🤖
 
-AI Summarizer is a web application that uses OpenAI's API to generate concise summaries of long text. It demonstrates full-stack development skills with a simple frontend and a secure backend.
+A simple and modern AI-powered text summarization web application built with HTML, CSS, JavaScript, and Python (FastAPI).  
+This app allows users to submit long text and receive concise summaries using OpenAI GPT-4. The API key is securely handled in the backend.
 
----
+## Demo
 
-## 🚀 Features
-
-- Summarizes long paragraphs into concise summaries.
-- Backend uses FastAPI to securely handle OpenAI API requests.
-- Frontend is simple and responsive using HTML, CSS, and JavaScript.
-- Safe API key management with environment variables (`.env` file).
+Check the live version here: [AI Summarizer Live](https://saloaaro.github.io/ai-summarizer/)
 
 ---
 
-## 🛠 Technologies Used
+## Features
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python, FastAPI, Uvicorn
-- **AI:** OpenAI GPT-4
-- **Other:** python-dotenv for secure environment variable management
+- Summarize any text input quickly into a concise summary.
+- Safe API key management using environment variables (`.env`) in the backend.
+- Full-stack: FastAPI backend + HTML/CSS/JS frontend.
+- Responsive, clean UI with simple interaction.
+- Works locally in the browser connected to backend.
 
 ---
 
-## 💻 Installation & Setup
+## Technologies Used
+
+- **Frontend:** HTML5, CSS3, JavaScript  
+- **Backend:** Python, FastAPI, Uvicorn  
+- **AI:** OpenAI GPT-4  
+- **Other:** python-dotenv for environment variable management
+
+---
+
+## Getting Started
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/saloaaro/ai-summarizer.git
-   cd ai-summarizer/backend
+```bash
+git clone https://github.com/saloaaro/ai-summarizer.git
+cd ai-summarizer/backend
